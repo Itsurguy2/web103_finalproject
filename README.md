@@ -194,7 +194,7 @@ For questions or issues, please reach out to team members or check the GitHub is
 
 **Status:** In Development - Milestone 1 Complete ✅
 <img src='https://github.com/Itsurguy2/web103_finalproject/blob/main/Design%20Daily%201.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Itsurguy2/web103_finalproject/blob/main/Submission%20Feed%202.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
