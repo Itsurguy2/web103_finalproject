@@ -1,7 +1,7 @@
 # Design Daily
 
 ## Team Members
-- Jesse Goffin
+- Jesse Rosenthal
 - Enoch Owoade
 - Joshua Holguin
 
