@@ -1,17 +1,66 @@
-# Entity Relationship Diagram
+erDiagram
+    USERS ||--o{ SUBMISSIONS : creates
+    USERS ||--o{ COMMENTS : writes
+    USERS ||--o{ LIKES : gives
+    PROMPTS ||--o{ SUBMISSIONS : has
+    SUBMISSIONS ||--o{ COMMENTS : receives
+    SUBMISSIONS ||--o{ LIKES : receives
 
-Reference the Creating an Entity Relationship Diagram final project guide in the course portal for more information about how to complete this deliverable.
+    USERS {
+        int user_id PK
+        string username UK
+        string email UK
+        string password
+        string avatar_url
+        string bio
+        string title
+        string location
+        int prompts_completed
+        int total_likes_received
+        int current_streak
+        int longest_streak
+        timestamp created_at
+        timestamp updated_at
+    }
 
-## Create the List of Tables
+    PROMPTS {
+        int prompt_id PK
+        string title
+        text description
+        text guidelines
+        string category
+        timestamp date_activated
+        timestamp created_at
+        timestamp updated_at
+    }
 
-[👉🏾👉🏾👉🏾 List each table in your diagram]
+    SUBMISSIONS {
+        int submission_id PK
+        int user_id FK
+        int prompt_id FK
+        string image_url
+        string title
+        text description
+        string category
+        int like_count
+        int comment_count
+        timestamp created_at
+        timestamp updated_at
+    }
 
-## Add the Entity Relationship Diagram
+    COMMENTS {
+        int comment_id PK
+        int submission_id FK
+        int user_id FK
+        text comment_text
+        int like_count
+        timestamp created_at
+        timestamp updated_at
+    }
 
-[👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
-
-| Column Name | Type | Description |
-|-------------|------|-------------|
-| id | integer | primary key |
-| name | text | name of the shoe model |
-| ... | ... | ... |
+    LIKES {
+        int like_id PK
+        int user_id FK
+        int submission_id FK
+        timestamp created_at
+    }

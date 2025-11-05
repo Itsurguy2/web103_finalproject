@@ -1,296 +1,257 @@
-# Design Daily - Milestone 2 Completion Checklist
+# Design Daily - Milestone 2: Wireframes, ERD, and Pitch
 
-## ✅ Milestone 2 Requirements
+## Milestone 2 Checklist
 
-### Wireframes (At Least 3 Pages)
-- [x] **Page 1: Home / Today's Prompt** 
-  - Displays current day's design challenge
-  - Shows prompt details, timer, and main CTAs
-  - Summary stats visible
+Complete all tasks by the due date:
 
-- [x] **Page 2: Submissions Feed**
-  - Grid layout showing all submissions for prompt
-  - Sort dropdown (Most Liked / Newest)
-  - Filter dropdown (All / Category options)
-  - Submission cards with thumbnail, artist, engagement stats
-  - Pagination controls
+### Wireframes
+- [x] Create wireframes for at least 3 pages
+- [x] Add wireframes to `planning/wireframes.md`
+- [x] Include list of all app pages
+- [x] Show user interactions and flow
 
-- [x] **Page 3: Submission Detail & Comments**
-  - Full-size image display
-  - Artist information and follow button
-  - Comments section with full comment threads
-  - Comment form to add new comments
-  - Engagement stats (likes, comment count)
+**Pages Wireframed:**
+1. ✅ Home / Today's Prompt
+2. ✅ Submissions Feed
+3. ✅ Submission Detail & Comments
+4. ✅ User Profile (bonus 4th page)
 
-- [x] **BONUS - Page 4: User Profile**
-  - Profile header with bio and stats
-  - Statistics section (prompts completed, likes, streaks)
-  - Submission gallery in grid format
-  - Edit profile functionality
+### Entity Relationship Diagram
+- [x] Create ERD for database schema
+- [x] Add ERD to `planning/entity_relationship_diagram.md`
+- [x] Include all database tables
+- [x] Show relationships between tables
 
-**Wireframe Completeness:** ✅ 4 pages with detailed ASCII mockups and component descriptions
+**Tables in ERD:**
+1. ✅ USERS
+2. ✅ PROMPTS
+3. ✅ SUBMISSIONS
+4. ✅ COMMENTS
+5. ✅ LIKES (many-to-many join table)
 
----
-
-### Entity Relationship Diagram (ERD)
-
-- [x] **Database Schema Defined**
-  - USERS table (14 columns)
-  - PROMPTS table (7 columns)
-  - SUBMISSIONS table (10 columns)
-  - COMMENTS table (7 columns)
-  - LIKES table (4 columns - Join Table)
-
-- [x] **Relationships Identified**
-  - ✅ One-to-Many: Users → Submissions
-  - ✅ Many-to-Many: Users ↔ Submissions (via LIKES join table)
-  - ✅ One-to-Many: Prompts → Submissions
-  - ✅ One-to-Many: Submissions → Comments
-  - ✅ One-to-Many: Users → Comments
-
-- [x] **Constraints & Rules Documented**
-  - Foreign key relationships defined
-  - CASCADE delete rules specified
-  - UNIQUE constraints on likes (prevent duplicates)
-  - Composite indexes identified
-
-- [x] **Design Decisions Explained**
-  - Denormalization strategy documented
-  - Streak tracking approach detailed
-  - Category filtering architecture
-  - Future scalability considerations
-
-**ERD Completeness:** ✅ 5 relationships (exceeds 2 minimum), fully documented with SQL
-
----
+**Relationships:**
+- ✅ One-to-Many: Users → Submissions
+- ✅ One-to-Many: Prompts → Submissions
+- ✅ One-to-Many: Submissions → Comments
+- ✅ Many-to-Many: Users ↔ Submissions (via Likes)
 
 ### Pitch Preparation
+- [x] Develop 3-minute pitch presentation
+- [x] Include problem, solution, and features
+- [x] Prepare for Q&A
+- [x] Pitch to be presented next unit
 
-- [x] **2-Minute Elevator Pitch Written**
-  - 15-second concept hook
-  - 20-second problem statement
-  - 25-second solution overview
-  - 30-second feature highlights
-  - 20-second competitive advantage
-  - 10-second closing call-to-action
-
-- [x] **Full Pitch Script (2 minutes)**
-  - Opening that captures attention
-  - Clear problem-solution narrative
-  - Features explained with context
-  - Why Design Daily is unique
-  - Call to action/next steps
-
-- [x] **Q&A Preparation**
-  - 7+ anticipated questions with answers:
-    - How to keep prompts fresh
-    - Quality control approach
-    - Time zone handling
-    - Toxic comment management
-    - Multi-discipline support
-    - Competitive differentiation
-    - Monetization strategy
-
-- [x] **Presentation Tips & Delivery Checklist**
-  - Do's and Don'ts documented
-  - Recommended visual aids/slides
-  - Pre-presentation checklist (9 items)
-  - Body language and tone guidance
-
-**Pitch Completeness:** ✅ Full 2-minute pitch with script, Q&A, and delivery tips
+### Reflection Questions
 
 ---
 
-## 📋 File Organization for Repository
+## Reflection Questions
 
-Add these files to your GitHub repository in the following structure:
+### Question 1: What are the key features of your app?
 
-```
-design-daily/
-├── README.md                          (Already updated with team names ✅)
-├── planning/
-│   ├── user_stories.md               (From Milestone 1 ✅)
-│   ├── wireframes.md                 (NEW - Milestone 2)
-│   └── erd.md                        (NEW - Milestone 2)
-├── milestones/
-│   ├── milestone1.md                 (From Milestone 1)
-│   └── milestone2.md                 (NEW - For reflection & checklist)
-└── docs/
-    └── pitch.md                      (NEW - Milestone 2)
-```
+**Answer:**
 
----
+Design Daily's key features include:
 
-## 📝 What to Submit for Milestone 2
+1. **Daily Design Prompts** - Users receive a new design challenge every day, automatically activated at midnight, providing consistent practice opportunities across various design disciplines (UI/UX, Illustration, Branding, Photography, 3D, Motion, Web Design).
 
-### Files to Create in Your Repository:
+2. **Submissions & Portfolio Building** - Users upload their design work in response to daily prompts, automatically building a diverse portfolio over time while participating in community challenges.
 
-**1. planning/wireframes.md**
-- Copy the content from `design_daily_wireframes.md`
-- Includes 4 detailed wireframe pages
-- ASCII mockups with component descriptions
-- Navigation flow documentation
+3. **Community Engagement** - Users can like and comment on others' submissions, creating a supportive feedback loop that encourages quality participation and community connection.
 
-**2. planning/erd.md**
-- Copy the content from `design_daily_erd.md`
-- Complete database schema with all tables
-- Mermaid diagram format for easy viewing
-- SQL constraints and relationships
-- Design decisions explained
+4. **Smart Discovery** - Users can sort submissions by "Most Liked" to see trending work or "Newest" to discover fresh submissions, and filter by design category to focus on areas of interest.
 
-**3. docs/pitch.md** (OR milestones/milestone2.md)
-- Copy the content from `design_daily_pitch.md`
-- 2-minute pitch script
-- Q&A preparation
-- Delivery checklist
+5. **Progress Tracking** - Users have personal profiles displaying completion statistics, current streak (consecutive days participated), longest streak achieved, and total likes received—gamifying the experience and providing motivation.
 
-**4. milestones/milestone2.md**
-- Update your milestone checklist as you complete tasks
-- Document any design decisions made
-- Note any assumptions or constraints
-- Include reflection questions (if required by your course)
+6. **User Profiles** - Each designer has a profile showcasing their submitted work, bio, location, title, and comprehensive statistics about their participation and community reception.
+
+**Custom Feature #1:** Auto-Generated Daily Prompts - The system automatically activates a new prompt every day without manual intervention, powered by a scheduler that maintains consistency and reliability.
+
+**Custom Feature #2:** Advanced Sorting & Filtering - Users can combine sorting (by likes or date) with category filtering (UI/UX, Illustration, etc.) to discover inspiration tailored to their interests.
 
 ---
 
-## 🎯 Milestone 2 Deliverables Summary
+### Question 2: What problem does your app solve?
 
-| Deliverable | Status | Details |
-|------------|--------|---------|
-| Wireframes (3+ pages) | ✅ Complete | 4 pages with ASCII mockups |
-| ERD with relationships | ✅ Complete | 5 relationships, fully documented |
-| Pitch (2 minutes) | ✅ Complete | Script + Q&A + delivery tips |
-| Files in Repository | 🔄 Pending | Need to copy to GitHub repo |
-| Team presentation | 🔄 Pending | Plan your pitch delivery |
+**Answer:**
 
----
+Design Daily solves **four interconnected problems** that designers face:
 
-## 🎨 Design Highlights
+1. **Creative Burnout & Stagnation**
+   - Problem: Designers working on client projects experience creative fatigue and loss of inspiration
+   - Solution: Daily prompts provide fresh creative challenges and structured practice opportunities
 
-### Wireframe Features:
-- **Mobile-responsive design** considerations noted
-- **Accessibility** guidelines included
-- **Interactive states** documented (hover, active, loading)
-- **Clear user flows** between pages
-- **Consistent layout patterns** across pages
+2. **Inconsistent Practice**
+   - Problem: Without external structure or accountability, designers skip practice and skills atrophy
+   - Solution: Daily prompts + streak tracking create habit formation and accountability
 
-### ERD Highlights:
-- **5 relationships** (exceeds 2 minimum requirement)
-- **Denormalization** for performance optimization
-- **Cascade rules** for data integrity
-- **Unique constraints** on likes to prevent duplicates
-- **Indexing strategy** for query optimization
+3. **Isolation & Lack of Community**
+   - Problem: Many designers work in silos without meaningful feedback or connection to peers
+   - Solution: Community features (likes, comments) and shared challenges foster connection and support
 
-### Pitch Highlights:
-- **Clear problem-solution narrative**
-- **Unique value proposition** vs. competitors
-- **Specific to Design Daily** (not generic pitch)
-- **Designed for designer audience**
-- **Covers all three team members** in narrative
+4. **Difficulty Building a Diverse Portfolio**
+   - Problem: Designers struggle to build varied portfolios when focused on one job or specialty
+   - Solution: Responding to diverse daily prompts automatically creates a portfolio spanning multiple design disciplines
+
+By combining daily structure, community engagement, and progress tracking, Design Daily addresses the root causes of designer burnout while building community and supporting portfolio development.
 
 ---
 
-## 🔍 Quality Checklist
+### Question 3: What makes your app unique compared to existing solutions?
 
-Before submitting Milestone 2:
+**Answer:**
 
-- [ ] Wireframes show at least 3 unique pages
-- [ ] Wireframes include user interactions and flow
-- [ ] ERD shows all 5 tables with columns defined
-- [ ] ERD includes Mermaid diagram or clear visual representation
-- [ ] All relationships labeled with cardinality (1-to-many, many-to-many)
-- [ ] Pitch is approximately 2 minutes when read aloud
-- [ ] Pitch includes problem, solution, features, and competitive advantage
-- [ ] Q&A includes 5+ realistic questions
-- [ ] All files formatted clearly for GitHub readability
-- [ ] README still reflects team member names (don't overwrite)
-- [ ] No spelling/grammar errors in documentation
-- [ ] File structure matches repository conventions
+Design Daily stands out in the design tools landscape by uniquely combining elements that other platforms keep separate:
 
----
+**vs. Dribbble (Design Portfolio Platform)**
+- Dribbble focuses on showcasing finished work to employers/clients
+- Design Daily emphasizes **daily practice & process**, not finished portfolio pieces
+- Dribbble is portfolio-centric; Design Daily is community & practice-centric
+- **Our advantage:** Lower barrier to entry, focus on growth, supportive over competitive
 
-## 🚀 Next Steps After Milestone 2
+**vs. Daily Prompt Websites (e.g., Design of the Day)**
+- Generic prompt sites lack community engagement or feedback loops
+- Design Daily includes **likes, comments, and community interaction**
+- Generic sites lack persistence or portfolio building
+- **Our advantage:** Community-driven, builds lasting portfolio, ongoing engagement
 
-Once Milestone 2 is complete:
+**vs. Habit/Productivity Apps (Habitica, Streaks)**
+- General habit trackers aren't design-specific
+- Design Daily is **purpose-built for designers**
+- Generic apps don't provide creative challenges or community
+- **Our advantage:** Combines habit tracking with creative practice & community
 
-### Before Milestone 3:
-1. **Practice your pitch** with your team and get feedback
-2. **Review each team member's role** in the pitch
-3. **Identify technical challenges** for development
-4. **Create GitHub issues** for each feature to track in Milestone 3
-5. **Set up your development environment** (Node, React, PostgreSQL)
+**vs. Social Media (Instagram, Twitter)**
+- Social media design communities are scattered and unstructured
+- Design Daily provides **daily structure and themed challenges**
+- Social platforms prioritize engagement metrics over growth
+- **Our advantage:** Focused on designer growth, not vanity metrics
 
-### For Milestone 3 (Development Begins):
-- Set up Express backend server
-- Set up React frontend with React Router
-- Create database and seed initial data
-- Implement API routes for all endpoints
-- Build React components for each wireframed page
-- Connect frontend to backend API
+**Our Unique Value Proposition:**
+Design Daily is the only platform that combines:
+1. **Structured daily challenges** (like LeetCode for designers)
+2. **Supportive community feedback** (not anonymous critique)
+3. **Automatic portfolio building** (portfolio as byproduct, not goal)
+4. **Cross-disciplinary** (all design disciplines welcome)
+5. **Gamified progress tracking** (streaks, stats, growth metrics)
+6. **Habit formation** (daily practice reinforcement)
 
-### Key Reminders:
-- All Baseline Features must be completed
-- Both Custom Features must be implemented:
-  1. Auto-Generated Daily Prompts
-  2. Advanced Sorting & Filtering
-- Regular commits to GitHub with clear messages
-- Test features before considering them complete
+No existing platform combines all six elements. That's what makes Design Daily unique.
 
 ---
 
-## 💡 Tips for Success
+## Wireframes Summary
 
-### For Wireframes:
-- Keep them simple but detailed enough for development
-- Show real user flows and interactions
-- Note all buttons, forms, and interactive elements
-- Include loading states and error handling UX
+**4 Wireframed Pages:**
 
-### For ERD:
-- Make sure relationships are clear and labeled
-- Document the purpose of each table
-- Note any denormalization decisions and why
-- Consider future scalability in design
+1. **Home Page** - Displays today's design prompt with clear call-to-action buttons
+   - Prompt title, description, guidelines
+   - Time remaining timer
+   - "Submit Your Design" and "View Submissions" buttons
+   - User stats footer
 
-### For Pitch:
-- Practice out loud multiple times
-- Make eye contact and smile during presentation
-- Use natural hand gestures
-- Tell a compelling story, not just feature listing
-- Leave time for questions
-- Be ready to explain technical decisions if asked
+2. **Submissions Feed** - Browse all submissions for the current prompt
+   - Sort dropdown (Most Liked / Newest)
+   - Category filter dropdown
+   - Grid of submission cards with artist, likes, comments
+   - Load more pagination
 
----
+3. **Submission Detail** - View full submission with comments
+   - Full-size submission image
+   - Artist information and profile link
+   - Comment section with all feedback
+   - Add new comment form
+   - Like button for engagement
 
-## 📊 Milestone 2 Completion Status
-
-**Current Status:** ✅ ALL MATERIALS CREATED
-
-- ✅ Wireframes (4 pages, detailed)
-- ✅ ERD (5 relationships, fully documented)
-- ✅ Pitch (2-minute script + Q&A + tips)
-- ✅ Checklist & guidance
-
-**Ready for:** Repository upload and team presentation
-
-**Time Estimate for Upload:** 15-30 minutes to copy files to GitHub
-
-**Presentation Prep Time:** 1-2 hours to practice and refine pitch
+4. **User Profile** - Display user's portfolio and statistics
+   - Profile header with bio and avatar
+   - Statistics (prompts completed, likes, streaks)
+   - Gallery grid of user's submissions
+   - Edit profile capability
 
 ---
 
-## 📞 Quick Reference
+## Entity Relationship Diagram Summary
 
-**Need to update team names?** Edit README.md
+**5 Database Tables:**
 
-**Need to modify wireframes?** Edit planning/wireframes.md
+1. **USERS** - User accounts and profiles (14 columns)
+2. **PROMPTS** - Daily design challenges (7 columns)
+3. **SUBMISSIONS** - User submissions for prompts (10 columns)
+4. **COMMENTS** - Comments on submissions (7 columns)
+5. **LIKES** - Join table for many-to-many relationship (4 columns)
 
-**Need to change database schema?** Edit planning/erd.md
+**Key Relationships:**
+- Users (1) → (Many) Submissions
+- Prompts (1) → (Many) Submissions
+- Submissions (1) → (Many) Comments
+- Users ↔ (Many-to-Many) Submissions via Likes table
 
-**Need to practice pitch?** Use docs/pitch.md
-
-**Missing something?** Refer back to the wireframes/ERD/pitch files for details
+**Design Decisions:**
+- Denormalized like_count and comment_count for performance
+- Cascade delete for data integrity
+- UNIQUE constraint on likes to prevent duplicates
+- Streak tracking fields for gamification
 
 ---
 
-**Milestone 2 Status:** Ready for Submission ✅
-**Next Milestone:** Milestone 3 - Development Setup & GitHub Project Management
+## Pitch Presentation Summary
+
+**3-Minute Pitch Outline:**
+
+**Opening (15 seconds)** - Hook the audience with the problem
+- "Have you ever scrolled through design inspiration sites and felt like you were missing something?"
+
+**Problem (20 seconds)** - Three designer pain points
+1. Creative burnout from client work
+2. Inconsistent practice without structure
+3. Isolation and lack of meaningful community
+
+**Solution (25 seconds)** - How Design Daily solves all three
+- Daily prompts for consistent practice
+- Community engagement through likes and comments
+- Portfolio building as a byproduct
+
+**Features (30 seconds)** - Key capabilities
+- Daily design challenges across all disciplines
+- Community submissions feed
+- Sorting and filtering for discovery
+- Progress tracking with streaks and statistics
+
+**Why Different (20 seconds)** - Competitive advantage
+- Combines daily challenges with community (not either/or)
+- Cross-disciplinary (not siloed by specialty)
+- Supportive, not competitive environment
+
+**Call to Action (10 seconds)** - Next steps
+- "Let's launch Design Daily and build the design community we deserve!"
+
+---
+
+## Files Submitted for Milestone 2
+
+✅ `planning/wireframes.md` - 4 detailed wireframed pages
+✅ `planning/entity_relationship_diagram.md` - Complete ERD with 5 tables
+✅ `milestones/milestone2.md` - This file with reflections
+✅ Pitch presentation prepared and ready
+
+---
+
+## Next Steps (Milestone 3)
+
+1. Present 3-minute pitch to classmates (next unit)
+2. Set up GitHub project with issues for all features
+3. Begin development on frontend and backend
+4. Implement all baseline features
+5. Implement both custom features
+6. Deploy to Render
+
+---
+
+**Milestone 2 Status:** ✅ Complete and Ready for Presentation
+
+**Presentation Date:** Next Unit (Milestone 3)
+
+**Pitch Duration:** 3 minutes + Q&A
+
+**Prepared by:** Jesse Goffin, Enoch Owoade, Joshua Holguin
